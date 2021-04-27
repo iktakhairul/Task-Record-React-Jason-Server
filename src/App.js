@@ -1,11 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="App">
-        <h1>Starting RMS front-end work with React Js.</h1>
-        <h5>@iktakhairul.</h5>
+    <div className="container">
+        <Header />
     </div>
   );
 }
