@@ -2,8 +2,8 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import {useState} from 'react'
 
-function App() {
-    const [tasks] = useState([
+const App = () => {
+    const [tasks, setTasks] = useState([
         {
             id: 1,
             text: 'Task Number One',
@@ -23,10 +23,16 @@ function App() {
             reminder: false,
         },
     ])
+
+    //Delete task
+    const deleteTask = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
+
   return (
     <div className="container">
         <Header title='Tasks Record'/>
-        <Tasks tasks={tasks}/>
+        <Tasks tasks={tasks} onDelete={deleteTask}/>
     </div>
   );
 }
