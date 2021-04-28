@@ -4,7 +4,7 @@ import AddTasks from "./components/AddTask";
 import {useState} from 'react'
 
 const App = () => {
-    const [showAddTask, setShowAddTask] = useState(true)
+    const [showAddTask, setShowAddTask] = useState(false)
     const [tasks, setTasks] = useState([
         {
             id: 1,
